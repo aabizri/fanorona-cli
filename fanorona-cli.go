@@ -22,7 +22,7 @@
 package main
 
 import (
-	"../basic"
+	"github.com/nodvos/go-fanorona/basic"
 	"errors"
 	"fmt"
 	"io/ioutil"
