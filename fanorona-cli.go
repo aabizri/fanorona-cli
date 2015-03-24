@@ -354,12 +354,25 @@ func main() {
 	Board = b
 	Turns = t
 
+  // Check for win
+  win,black := b.Win()
+  if win {
+    s := ""
+    switch black{
+      case true:
+        s = "black"
+      case false:
+        s = "white"
+    }
+    fmt.Printf("The %s player has won\n",s)
+  }
+  
 	// Now read
 	if len(os.Args) == 1 {
 		fmt.Println("Please give arguments")
 		return
 	}
-
+  
 	switch os.Args[1] {
 	case "print":
 		err = print()
